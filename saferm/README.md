@@ -11,6 +11,8 @@ Supported Scenarios
 - rm -rf /bin
 - Other root directory scenarios, and so on.
 
+### install
+
 use this shell `saferm-install.sh` to install (if need sudo just run `sudo bash saferm-install.sh`)
 
 ```shell
@@ -59,4 +61,11 @@ sudo curl -o /usr/local/bin/saferm https://raw.githubusercontent.com/sinlov/shel
 ```shell
 # safe rm kit
 alias rm='/usr/local/bin/saferm'
+```
+
+### uninstall
+
+```bash
+$ sudo rm -rf /usr/local/bin/saferm
+# and remove alias of rm
 ```
