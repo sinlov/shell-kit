@@ -11,7 +11,7 @@ Supported Scenarios
 - rm -rf /bin
 - Other root directory scenarios, and so on.
 
-- use this shell  `saferm-install.sh`
+use this shell `saferm-install.sh` to install (if need sudo just run `sudo bash saferm-install.sh`)
 
 ```shell
 install_url=https://raw.githubusercontent.com/sinlov/shell-kit/main/saferm/saferm.sh
