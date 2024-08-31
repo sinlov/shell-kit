@@ -22,11 +22,12 @@ Please read [Contributor Guide](.github/CONTRIBUTING_DOC/CONTRIBUTING.md) for mo
 sh -c "$(curl -s -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -h
 # use script proxy
 sh -c "$(curl -s -L --fail https://mirror.ghproxy.com/https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -h
+sh -c "$(curl -s -L --fail https://ghproxy.net/https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -h
 
 # set install path
 sh -c "$(curl -s -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -d -b ~/.local/bin
 # use download proxy prefix
-sh -c "$(curl -s -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -x https://ghproxy.com/
+sh -c "$(curl -s -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -d -b ~/.local/bin -x https://ghproxy.cc/
 ```
 
 ## saferm
