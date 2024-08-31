@@ -16,6 +16,17 @@ Please read [Contributor Guide](.github/CONTRIBUTING_DOC/CONTRIBUTING.md) for mo
 
 # this project for shell kit
 
+## go-task install
+
+```bash
+sh -c "$(curl -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -h
+
+# set install path
+sh -c "$(curl -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -d -b ~/.local/bin
+# use download proxy prefix
+sh -c "$(curl -L --fail https://raw.githubusercontent.com/sinlov/shell-kit/main/go-task/install.sh)" -- -x https://ghproxy.com/
+```
+
 ## saferm
 
 SafeRM is a custom shell script that provides an extra layer of protection when using the rm -rf command. It prompts the user for confirmation before deleting files and directories, helping to prevent accidental data loss.
