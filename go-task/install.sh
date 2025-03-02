@@ -29,7 +29,6 @@ parse_args() {
       x) DOWNLOAD_PROXY_PREFIX="$OPTARG" ;;
       d) log_set_priority 10 ;;
       h | \?) usage "$0" ;;
-      x) set -x ;;
     esac
   done
   shift $((OPTIND - 1))
