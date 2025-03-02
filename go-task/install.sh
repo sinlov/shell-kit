@@ -39,6 +39,19 @@ parse_args() {
 # network, either nothing will happen or will syntax error
 # out preventing half-done work
 execute() {
+  if [ -f "${BINDIR}/${binexe}" ]; then
+    log_info "try check installed ${BINDIR}/${binexe}"
+    now_check_version_out=$(${BINDIR}/${binexe} --version)
+    if [ "$OS" = "windows" ]; then
+      now_check_version_out=$(${BINDIR}/${binexe}.exe --version)
+    fi
+    want_version_info="Task version: ${VERSION}"
+    if [[ "$now_check_version_out" =~ "${want_version_info}" ]]; then
+      log_info "has installed ${BINDIR}/${binexe}"
+      log_info " version info: $now_check_version_out"
+    fi
+  fi
+  ## pass check
   tmpdir=$(mktemp -d)
   log_debug "downloading files into ${tmpdir}"
   http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
