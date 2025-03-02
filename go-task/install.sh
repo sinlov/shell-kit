@@ -103,11 +103,12 @@ tag_to_version() {
   REALTAG=$(github_release "$OWNER/$REPO" "${TAG}") && true
   if test -z "$REALTAG"; then
     log_crit "unable to find '${TAG}' - use 'latest' or see https://github.com/${PREFIX}/releases for details"
-    exit 1
+    # exit 1
+  else
+    # if version starts with 'v', remove it
+    TAG="$REALTAG"
+    VERSION=${TAG#v}
   fi
-  # if version starts with 'v', remove it
-  TAG="$REALTAG"
-  VERSION=${TAG#v}
 }
 adjust_format() {
   # change format (tar.gz or zip) based on OS
